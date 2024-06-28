@@ -58,7 +58,7 @@ plausible:
 # A picture of you, square(!), at least 180x180 pixels, more is better. Recommended file size < 100 KB.
 # Leave empty for generic placeholder image.
 # You can use your GitHub image:
-avatar: "https://raw.githubusercontent.com/Andyvillanueva9/images/main/blue-oak.jpg"
+avatar: "https://raw.githubusercontent.com/Andyvillanueva9/images/main/Logo%20Tranparent.png"
 #avatar: "images/jonathan_doe.jpg"
 #avatar:
 
@@ -186,7 +186,6 @@ links:
 # Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
 #extra_html:
 extra_html: >
-    Any (multiline) text containing simple HTML,
-    such as links or ... lorem ipsum.
+    Dont forget to check out our gallery and Etsy shop
 
 #EOF
