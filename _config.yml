@@ -12,7 +12,7 @@ sass:
 # When modifying this file, take care to preserve the indentation. This is YAML ...
 
 # Main Headline, name required, subtitle optional
-name: Blue Oak Leather Co
+name: 100% Handmade In The USA
 #subtitle:
 subtitle: 
 
@@ -116,6 +116,11 @@ links:
       show: true
       href: https://www.instagram.com/blueoakleatherco/
       icon: fab fa-instagram
+  - etsy:
+      name: Etsy
+      show: true
+      href: https://www.etsy.com/shop/BlueOakLeatherCo
+      icon: fab fa-etsy
   - flickr:
       name: Flickr
       show: false
@@ -186,6 +191,6 @@ links:
 # Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
 #extra_html:
 extra_html: >
-    Dont forget to check out our gallery and Etsy shop
+    Dont Forget To Check Out Our Etsy Shop and Our Gallery Bellow!
 
 #EOF
