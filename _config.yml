@@ -85,7 +85,7 @@ links:
       name: YouTube
       show: true
       href: https://www.youtube.com/@blueoakleatherco2077
-      icon: fab fa-youtube fa-3x
+      icon: fab fa-youtube fa-2x
   - twitter:
       name: Twitter
       show: false
@@ -115,12 +115,12 @@ links:
       name: Instagram
       show: true
       href: https://www.instagram.com/blueoakleatherco/
-      icon: fab fa-instagram
+      icon: fab fa-instagram fa-2x
   - etsy:
       name: Etsy
       show: true
       href: https://www.etsy.com/shop/BlueOakLeatherCo
-      icon: fab fa-etsy
+      icon: fab fa-etsy fa-2x
   - flickr:
       name: Flickr
       show: false
