@@ -85,7 +85,7 @@ links:
       name: YouTube
       show: true
       href: https://www.youtube.com/@blueoakleatherco2077
-      icon: fab fa-youtube
+      icon: fab fa-youtube fa-3x
   - twitter:
       name: Twitter
       show: false
