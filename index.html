@@ -121,35 +121,22 @@ permalink: /
 </div>
 </div>
 <style>
-    div.gallery {
-      margin: 5px;
-      border: 0px solid #ccc;
-      float: left;
-      width: 468px;
-    }
-    div.gallery:hover {
-      border: 0px solid #777;
-    }
-    div.gallery img {
-      width: 100%;
-      height: auto;
-    }
-    div.desc {
-      padding: 5px;
-      text-align: center;
-    }
-    
     /* New styles for the carousel */
     .carousel-container {
         position: relative;
         overflow: hidden;
         width: 100%;
-        max-width: 468px; /* Match your gallery width */
-        margin: 0 auto;
+        height: 100vh; /* Optional: This makes it fill the screen height */
     }
     .carousel-item {
         display: none;
         width: 100%;
+        height: 100%;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This makes the image cover the entire space without distorting */
     }
     .carousel-item.active {
         display: block;
