@@ -117,27 +117,4 @@ div.row.links {
 
 /* --------- Footer ---------------------------------------------------------------------------- */
 
-footer {
-    position: absolute;
-    bottom: 0;
-    height: $fc-footer-height;
-    line-height: $fc-footer-height - 2 * 10px;
-    padding: 10px 0;
-    width: 100%;
-    font-size: smaller;
-    color: rgba(255, 255, 255, 0.4);
-
-    .col {
-        padding: 0;
-    }
-    a {
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
-        &:hover {
-            text-decoration: none;
-            color: white;
-        }
-    }
-
-
 @import 'footer';
