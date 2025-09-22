@@ -118,24 +118,72 @@ div.row.links {
 /* --------- Footer ---------------------------------------------------------------------------- */
 
 footer {
-    position: absolute;
-    bottom: 0;
-    height: $fc-footer-height;
-    line-height: $fc-footer-height - 2 * 10px;
-    padding: 10px 0;
-    width: 100%;
-    font-size: smaller;
-    color: rgba(255, 255, 255, 0.4);
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
 
-    .col {
-        padding: 0;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li a {
+    color: #555;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.footer-section li a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
-    a {
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
-        &:hover {
-            text-decoration: none;
-            color: white;
-        }
+
+    .footer-section {
+        margin: 20px 0;
     }
+}
 }
