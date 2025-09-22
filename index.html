@@ -120,7 +120,6 @@ permalink: /
 
 </div>
 </div>
-
 <style>
     div.gallery {
       margin: 5px;
@@ -128,48 +127,87 @@ permalink: /
       float: left;
       width: 468px;
     }
-    
     div.gallery:hover {
       border: 0px solid #777;
     }
-    
     div.gallery img {
       width: 100%;
       height: auto;
     }
-    
     div.desc {
       padding: 5px;
       text-align: center;
     }
-    </style>
-    </head>
-    <body>
     
-    <div class="gallery">
-      <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg">
-        <img src= "https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg" alt="Pen Cases" width="600" height="400">
-      </a>
-      <div class="desc">Gallery</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg">
-        <img src= "https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg" alt="New" width="600" height="400">
-      </a>
-      <div class="desc">New</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg">
-        <img src= "https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg" alt="Worn" width="600" height="400">
-      </a>
-      <div class="desc">Warranty</div>
-    </div>
+    /* New styles for the carousel */
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 468px; /* Match your gallery width */
+        margin: 0 auto;
+    }
+    .carousel-item {
+        display: none;
+        width: 100%;
+    }
+    .carousel-item.active {
+        display: block;
+    }
+</style>
 
-<footer><div class="container"><div class="row">
-    <div class="col text-center"></a>
+</head>
+<body>
+    <div class="glass-pane">
+        </div>
+
+    <div class="carousel-container">
+        <div class="carousel-item active">
+            <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg">
+                <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg" alt="Pen Cases">
+            </a>
+            <div class="desc">Gallery</div>
+        </div>
+        <div class="carousel-item">
+            <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg">
+                <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg" alt="New">
+            </a>
+            <div class="desc">New</div>
+        </div>
+        <div class="carousel-item">
+            <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg">
+                <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg" alt="Worn">
+            </a>
+            <div class="desc">Warranty</div>
+        </div>
     </div>
+    
+    <footer>
+        </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            let currentItem = 0;
+            const totalItems = carouselItems.length;
+
+            function showNextItem() {
+                // Hide the current active item
+                carouselItems[currentItem].classList.remove('active');
+                
+                // Move to the next item, or loop back to the beginning
+                currentItem = (currentItem + 1) % totalItems;
+                
+                // Show the new active item
+                carouselItems[currentItem].classList.add('active');
+            }
+
+            // Change image every 5 seconds (5000 milliseconds)
+            setInterval(showNextItem, 5000);
+        });
+    </script>
+</body>
+</html>
 </div></div></footer>
 
 </body>
