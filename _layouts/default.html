@@ -1,1 +1,36 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    </head>
+<body>
+    <header>
+        <div class="container glass-pane">
+            <div class="row pt-sm-4">
+                <div class="col text-center">
+                    <img id="avatar" class="my-3 my-sm-4" alt="100% Handmade In The USA" src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/small%20Logo%20Tranparent.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center fw-bold">100% Handmade In The USA</h1>
+                </div>
+            </div>
+            <nav class="row justify-content-center">
+                <ul class="d-flex list-unstyled">
+                    <li class="px-3"><a href="{{ "/" | relative_url }}">Home</a></li>
+                    <li class="px-3"><a href="/about/">About Us</a></li>
+                    <li class="px-3"><a href="/warranty/">Warranty</a></li>
+                    <li class="px-3"><a href="https://www.etsy.com/shop/BlueOakLeatherCo" target="_blank">Store</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        </footer>
+</body>
+</html>
