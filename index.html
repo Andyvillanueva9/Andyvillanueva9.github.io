@@ -5,7 +5,6 @@ permalink: /
 <html lang="en">
 <head>
 
-    <!-- Google Analytics -->
     <script>
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
         ga('create', '{{ site.ga.account }}', 'auto');{% if site.ga.anonymizeip %}
@@ -38,7 +37,6 @@ permalink: /
     {% if site.url %}<link rel="canonical" href="{{ site.url }}">{% endif %}
     {% include analytics.html %}
 
-    <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png">
@@ -49,7 +47,6 @@ permalink: /
     <meta name="msapplication-config" content="{{ site.baseurl }}/images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Stylesheets -->
     {%- comment -%} Bootstrap should be the first stylesheet {%- endcomment %}
     <link rel="stylesheet" type="text/css" crossorigin="anonymous"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -62,8 +59,30 @@ permalink: /
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"> 
 
+    <style>
+        /* New styles for the carousel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh; /* Optional: This makes it fill the screen height */
+        }
+        .carousel-item {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This makes the image cover the entire space without distorting */
+        }
+        .carousel-item.active {
+            display: block;
+        }
+    </style>
+
     {% if site.ga and site.ga.cookieconsent -%}
-    <!-- Cookie Consent popup to comply with EU cookie law -->
     <link rel="stylesheet" type="text/css" crossorigin="anonymous"
           href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
           integrity="sha384-nA7usz4cMKo7RylsCZnpe0V9qx5X7sa011o0OrDzrKUE7Ero1gB48Fjaw6SFxVZe" />
@@ -118,58 +137,51 @@ permalink: /
 </div>
 {% endif %}
 
-</div>
-</div>
-<style>
-    /* New styles for the carousel */
-    .carousel-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 100vh; /* Optional: This makes it fill the screen height */
-    }
-    .carousel-item {
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-    .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* This makes the image cover the entire space without distorting */
-    }
-    .carousel-item.active {
-        display: block;
-    }
-</style>
-
-</head>
-<body>
-<div class="glass-pane">
-    <div class="container fuse-core-content pb-4">
-        <div class="carousel-container">
-            <div class="carousel-item active">
-                <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg">
-                    <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg" alt="Pen Cases">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg">
-                    <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg" alt="New">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg">
-                    <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg" alt="Worn">
-                </a>
-            </div>
-        </div>
-
+<div class="carousel-container">
+    <div class="carousel-item active">
+        <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg">
+            <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1506-1web-1.jpg" alt="Pen Cases">
+        </a>
+    </div>
+    <div class="carousel-item">
+        <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg">
+            <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/DSCF1546-1web..jpg" alt="New">
+        </a>
+    </div>
+    <div class="carousel-item">
+        <a target="_blank" href="https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg">
+            <img src="https://raw.githubusercontent.com/Andyvillanueva9/images/main/IMG_0967web.jpg" alt="Worn">
+        </a>
     </div>
 </div>
-    
-    <footer>
-        <div class="footer-container">
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentItem = 0;
+        const totalItems = carouselItems.length;
+
+        function showNextItem() {
+            // Hide the current active item
+            carouselItems[currentItem].classList.remove('active');
+            
+            // Move to the next item, or loop back to the beginning
+            currentItem = (currentItem + 1) % totalItems;
+            
+            // Show the new active item
+            carouselItems[currentItem].classList.add('active');
+        }
+
+        // Change image every 5 seconds (5000 milliseconds)
+        setInterval(showNextItem, 5000);
+    });
+</script>
+
+</div>
+</div>
+
+<footer>
+    <div class="footer-container">
         <div class="footer-section">
             <h4>About Us</h4>
             <p>Blue Oak Leather Co. is based in California, creating timeless, handcrafted leather goods. We are dedicated to quality and durability.</p>
@@ -193,32 +205,7 @@ permalink: /
     <div class="footer-bottom">
         <p>&copy; {{ site.time | date: "%Y" }} Blue Oak Leather Co. All rights reserved.</p>
     </div>
-        </footer>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            let currentItem = 0;
-            const totalItems = carouselItems.length;
-
-            function showNextItem() {
-                // Hide the current active item
-                carouselItems[currentItem].classList.remove('active');
-                
-                // Move to the next item, or loop back to the beginning
-                currentItem = (currentItem + 1) % totalItems;
-                
-                // Show the new active item
-                carouselItems[currentItem].classList.add('active');
-            }
-
-            // Change image every 5 seconds (5000 milliseconds)
-            setInterval(showNextItem, 5000);
-        });
-    </script>
-</body>
-</html>
-</div></div></footer>
+</footer>
 
 </body>
 </html>
