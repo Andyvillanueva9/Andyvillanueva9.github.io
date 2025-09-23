@@ -232,41 +232,25 @@ footer {
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const images = document.querySelectorAll('.carousel-item img');
-    let imagesLoaded = 0;
+        document.addEventListener("DOMContentLoaded", function() {
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            let currentItem = 0;
+            const totalItems = carouselItems.length;
 
-    images.forEach(img => {
-        if (img.complete) {
-            imagesLoaded++;
-        } else {
-            img.addEventListener('load', () => {
-                imagesLoaded++;
-                if (imagesLoaded === images.length) {
-                    startCarousel();
-                }
-            });
-        }
-    });
+            function showNextItem() {
+                // Hide the current active item
+                carouselItems[currentItem].classList.remove('active');
+                
+                // Move to the next item, or loop back to the beginning
+                currentItem = (currentItem + 1) % totalItems;
+                
+                // Show the new active item
+                carouselItems[currentItem].classList.add('active');
+            }
 
-    if (imagesLoaded === images.length) {
-        startCarousel();
-    }
-
-    let currentItem = 0;
-    const totalItems = carouselItems.length;
-
-    function startCarousel() {
-        setInterval(showNextItem, 5000);
-    }
-
-    function showNextItem() {
-        carouselItems[currentItem].classList.remove('active');
-        currentItem = (currentItem + 1) % totalItems;
-        carouselItems[currentItem].classList.add('active');
-    }
-});
+            // Change image every 5 seconds (5000 milliseconds)
+            setInterval(showNextItem, 5000);
+        });
 </script>
 
 <footer>
