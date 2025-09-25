@@ -33,7 +33,7 @@ This warranty is a promise against manufacturing defects, not a promise against 
 ## Filing a Warranty Claim
 If you believe your Blue Oak Leather Co. product has a manufacturing defect covered by this warranty, please follow these steps:
 
-* **Contact Us:** Email us at [Your Email Address] with a detailed description of the issue and your order number. Please include clear photos or a short video of the defect.
+* **Contact Us:** Email us at blueoakleatherco@gmail.com with a detailed description of the issue and your order number. Please include clear photos or a short video of the defect.
 * **Assessment:** We will review your claim and determine if the issue is a manufacturing defect covered under this warranty.
 * **Resolution:** If your claim is approved, we will provide instructions on how to send your product to us. We will then repair the item or, if a repair is not possible, we will offer a replacement of the same or a similar item. The cost of shipping the item to us is the responsibility of the customer. We will cover the cost of shipping the repaired or replaced item back to you.
 
@@ -45,4 +45,5 @@ This warranty policy is in accordance with federal law, including the Magnuson-M
 * This warranty is a "Limited Warranty" as defined by federal law.
 * The warranty period begins on the date of delivery of the product to the consumer.
 * The terms of this express warranty do not limit any implied warranties provided by California law.
+
 
