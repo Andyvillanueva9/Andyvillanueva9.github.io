@@ -12,9 +12,9 @@ sass:
 # When modifying this file, take care to preserve the indentation. This is YAML ...
 
 # Main Headline, name required, subtitle optional
-name: 100 Year Warranty And 100% Handmade In The USA
+name: 100% Handmade In The USA
 #subtitle:
-subtitle: 
+subtitle: Our Vision
 
 # Title attribute of HTML Page, uses 'name' from above if empty
 title: Blue Oak Leather Co
@@ -191,6 +191,6 @@ links:
 # Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
 #extra_html:
 extra_html: >
-    Dont Forget To Check Out Our Etsy Shop and Our Gallery Bellow!
+    "We believe in a world with less waste and more quality. Our mission is to preserve the art of true handcraftsmanship, creating timeless leather goods that age beautifully with you, just like the blue oak tree—strong, enduring, and a symbol of our commitment to the environment."
 
 #EOF
